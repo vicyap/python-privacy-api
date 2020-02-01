@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+PROJECT_FILES="privacy_api tests setup.py"
+SOURCE_FILES="privacy_api"
