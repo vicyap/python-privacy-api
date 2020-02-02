@@ -19,6 +19,10 @@ repos:
         name: pylint-src
         additional_dependencies: [requests]
         files: ^privacy_api/
+        args:
+          - --disable=bad-continuation
+          - --disable=too-many-arguments
+          - --disable=line-too-long
 
   - repo: https://github.com/PyCQA/pylint
     rev: pylint-2.4.4
