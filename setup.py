@@ -18,7 +18,7 @@ DESCRIPTION = "API client for privacy.com"
 URL = "https://github.com/vicyap/python-privacy-api"
 AUTHOR = "Victor Yap"
 REQUIRES_PYTHON = ">=3.6.0"
-VERSION = "0.1.6"
+VERSION = "0.1.7"
 
 # What packages are required for this module to be executed?
 REQUIRED = ["requests"]
