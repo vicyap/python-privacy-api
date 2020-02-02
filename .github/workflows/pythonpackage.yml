@@ -32,7 +32,7 @@ jobs:
     steps:
     - name: Publish package
       if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
-      uses: pypa/gh-action-pypi-publisher@v1.0.0a0
+      uses: pypa/gh-action-pypi-publisher@master
       with:
         user: ${{ secrets.PYPI_USERNAME }}
         password: ${{ secrets.PYPI_PASSWORD }}
