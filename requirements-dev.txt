@@ -1,0 +1,11 @@
+tox
+pytest
+pytest-mock
+pytest-cov
+tox
+pylint
+black
+isort
+twine
+mypy
+bumpversion
