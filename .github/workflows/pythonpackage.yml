@@ -27,3 +27,13 @@ jobs:
     - name: Test
       run: |
         ci/test
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Publish package
+      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+      uses: pypa/gh-action-pypi-publisher@37e305e
+      with:
+        user: ${{ secrets.PYPI_USERNAME }}
+        password: ${{ secrets.PYPI_PASSWORD }}
