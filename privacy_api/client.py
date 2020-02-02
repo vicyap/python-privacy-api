@@ -35,13 +35,18 @@ class Privacy:
         Returns:
             The JSON response.
         """
-        params = {
-            "page": page,
-            "page_size": page_size,
-            "begin": begin,
-            "end": end,
-            "card_token": card_token,
-        }
+        params = {}
+        if page:
+            params["page"] = str(page)
+        if page_size:
+            params["page_size"] = str(page_size)
+        if begin:
+            params["begin"] = begin
+        if end:
+            params["end"] = end
+        if card_token:
+            params["card_token"] = card_token
+
         url = self.base_url + "/v1/card"
         resp = requests.get(url, headers=self.headers, params=params)
         resp.raise_for_status()
@@ -80,14 +85,20 @@ class Privacy:
                 f"approval_status='{approval_status}' must be in {allowed_approval_statuses}"
             )
 
-        params = {
-            "page": page,
-            "page_size": page_size,
-            "begin": begin,
-            "end": end,
-            "card_token": card_token,
-            "transaction_token": transaction_token,
-        }
+        params = {}
+        if page:
+            params["page"] = str(page)
+        if page_size:
+            params["page_size"] = str(page_size)
+        if begin:
+            params["begin"] = begin
+        if end:
+            params["end"] = end
+        if card_token:
+            params["card_token"] = card_token
+        if transaction_token:
+            params["transaction_token"] = transaction_token
+
         url = self.base_url + f"/v1/transaction/{approval_status}"
         resp = requests.get(url, headers=self.headers, params=params)
         resp.raise_for_status()
