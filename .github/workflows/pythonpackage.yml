@@ -21,15 +21,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -e .
         pip install -r requirements-dev.txt
-    - name: Check formatting
+    - name: pre-commit run
       run: |
-        ci/fmt-check
-    - name: Lint
-      run: |
-        ci/lint
-    - name: Type Check
-      run: |
-        ci/static-type-check
+        pre-commit run
     - name: Test
       run: |
         ci/test

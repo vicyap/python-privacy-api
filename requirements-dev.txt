@@ -1,11 +1,10 @@
-tox
 pytest
 pytest-mock
 pytest-cov
-tox
 pylint
 black
 isort
 twine
 mypy
 bump2version
+pre-commit

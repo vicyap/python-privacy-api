@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-set -xeuo pipefail
-
-. "$(dirname $0)/common"
-
-black --line-length=100 ${PROJECT_FILES}
-isort --atomic --recursive ${PROJECT_FILES}

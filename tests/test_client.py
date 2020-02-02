@@ -1,9 +1,5 @@
-import pytest
-
-
-import requests
-
 import privacy_api
+import pytest
 
 
 @pytest.fixture
@@ -58,7 +54,6 @@ def test_update_card_raises(client):
 
     with pytest.raises(ValueError):
         client.update_card("", state="OPEN", spend_limit_duration="")
-
 
 
 def test_simulate_authorization(client):

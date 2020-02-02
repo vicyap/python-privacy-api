@@ -7,7 +7,7 @@ import requests
 class Privacy:
     """privacy.com API client."""
 
-    def __init__(self, api_key: str, base_url: str):
+    def __init__(self, api_key: str, base_url: str) -> None:
         self.api_key = api_key
         self.base_url = base_url
         self.headers = {"Authorization": f"api-key {self.api_key}"}
@@ -130,8 +130,16 @@ class Privacy:
         if card_type not in allowed_card_types:
             raise ValueError(f"card_type='{card_type}' must be in {allowed_card_types}")
 
-        allowed_spend_limit_durations = {"TRANSACTION", "MONTHLY", "ANNUALLY", "FOREVER"}
-        if spend_limit_duration is not None and spend_limit_duration not in allowed_spend_limit_durations:
+        allowed_spend_limit_durations = {
+            "TRANSACTION",
+            "MONTHLY",
+            "ANNUALLY",
+            "FOREVER",
+        }
+        if (
+            spend_limit_duration is not None
+            and spend_limit_duration not in allowed_spend_limit_durations
+        ):
             raise ValueError(
                 f"spend_limit_duration='{spend_limit_duration}' must be in {allowed_spend_limit_durations}"
             )
@@ -185,8 +193,16 @@ class Privacy:
         if state is not None and state not in allowed_states:
             raise ValueError(f"state='{state}' must be in {allowed_states}")
 
-        allowed_spend_limit_durations = {"TRANSACTION", "MONTHLY", "ANNUALLY", "FOREVER"}
-        if spend_limit_duration is not None and spend_limit_duration not in allowed_spend_limit_durations:
+        allowed_spend_limit_durations = {
+            "TRANSACTION",
+            "MONTHLY",
+            "ANNUALLY",
+            "FOREVER",
+        }
+        if (
+            spend_limit_duration is not None
+            and spend_limit_duration not in allowed_spend_limit_durations
+        ):
             raise ValueError(
                 f"spend_limit_duration='{spend_limit_duration}' must be in {allowed_spend_limit_durations}"
             )
