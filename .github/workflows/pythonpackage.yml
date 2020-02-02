@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -27,6 +26,10 @@ jobs:
     - name: Test
       run: |
         ci/test
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
     - name: Publish package
       if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
       uses: pypa/gh-action-pypi-publisher@v1.0.0a0
