@@ -239,7 +239,7 @@ class Privacy:
         """
         data = {"descriptor": descriptor, "pan": pan, "amount": amount}
         url = self.base_url + "/v1/simulate/authorize"
-        resp = requests.post(url, headers=self.headers, json=data).json()
+        resp = requests.post(url, headers=self.headers, json=data)
         resp.raise_for_status()
         return resp.json()["token"]
 
