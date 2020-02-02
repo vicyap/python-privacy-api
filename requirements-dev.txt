@@ -8,4 +8,4 @@ black
 isort
 twine
 mypy
-bumpversion
+bump2version
