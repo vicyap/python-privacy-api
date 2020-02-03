@@ -17,19 +17,20 @@ repos:
     hooks:
     -   id: pylint
         name: pylint-src
-        additional_dependencies: [requests]
+        additional_dependencies: [requests, attrs, marshmallow]
         files: ^privacy_api/
         args:
           - --disable=bad-continuation
           - --disable=too-many-arguments
           - --disable=line-too-long
+          - --disable=too-many-instance-attributes
 
   - repo: https://github.com/PyCQA/pylint
     rev: pylint-2.4.4
     hooks:
     -   id: pylint
         name: pylint-tests
-        additional_dependencies: [requests, pytest]
+        additional_dependencies: [requests, attrs, marshmallow, pytest]
         files: ^tests/
         args: 
           - --disable=missing-function-docstring
