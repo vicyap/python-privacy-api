@@ -21,8 +21,9 @@ repos:
         files: ^privacy_api/
         args:
           - --disable=bad-continuation
-          - --disable=too-many-arguments
+          - --disable=invalid-name
           - --disable=line-too-long
+          - --disable=too-many-arguments
           - --disable=too-many-instance-attributes
 
   - repo: https://github.com/PyCQA/pylint
@@ -33,6 +34,7 @@ repos:
         additional_dependencies: [requests, attrs, marshmallow, pytest]
         files: ^tests/
         args: 
+          - --disable=invalid-name
           - --disable=missing-function-docstring
           - --disable=missing-module-docstring
           - --disable=redefined-outer-name

@@ -1,0 +1,52 @@
+{
+  "amount": 1,
+  "status": "PENDING",
+  "result": "APPROVED",
+  "settled_amount": 0,
+  "created": "2020-02-02T23:49:37Z",
+  "merchant": {
+    "descriptor": "merchant",
+    "city": "NEW YORK",
+    "state": "NY",
+    "country": "USA",
+    "mcc": "5812",
+    "acceptor_id": "000000000000"
+  },
+  "card": {
+    "created": "2020-02-02T23:34:56Z",
+    "token": "00000000-0000-0000-0000-000000000000",
+    "last_four": "1004",
+    "hostname": "",
+    "memo": "UNLOCKED card",
+    "type": "UNLOCKED",
+    "spend_limit": 0,
+    "spend_limit_duration": "TRANSACTION",
+    "state": "OPEN",
+    "funding": {
+      "account_name": "Sandbox",
+      "token": "00000000-0000-0000-0000-000000000000",
+      "type": "DEPOSITORY_CHECKING"
+    },
+    "pan": "0000000000000000",
+    "cvv": "000",
+    "exp_month": "02",
+    "exp_year": "2026"
+  },
+  "token": "00000000-0000-0000-0000-000000000000",
+  "events": [
+    {
+      "type": "AUTHORIZATION",
+      "token": "00000000-0000-0000-0000-000000000000",
+      "created": "2020-02-02T23:49:37Z",
+      "amount": 1,
+      "result": "APPROVED"
+    }
+  ],
+  "funding": [
+    {
+      "type": "DEPOSITORY_CHECKING",
+      "amount": 1,
+      "token": "00000000-0000-0000-0000-000000000000"
+    }
+  ]
+}
